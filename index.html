@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elgen's Alarm!</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <!-- Background video container -->
+    <div class="background-video">
+        <video src="/src/assets/Newyear.mp4" autoplay loop ></video> <!-- Remove muted attribute -->
+    </div>
+
+    <!-- Main app container -->
+    <div id="root"></div>
+    
+    <script type="module" src="/src/main.jsx"></script>
+</body>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+      const video = document.querySelector('.background-video video');
+      
+      document.body.addEventListener('click', () => {
+          video.play();
+      });
+  });
+</script>
+
+</html>

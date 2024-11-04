@@ -1,0 +1,146 @@
+/* index.css */
+
+/* Fullscreen background video */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; 
+  filter: blur(5px);
+}
+
+.background-video video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; 
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  background-color: black; 
+}
+
+@keyframes glowing2 {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 20, 147, 0.6), 0 0 20px rgba(95, 192, 116, 0.6),
+                0 0 30px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 20, 147, 0.8);
+    border-color: rgba(255, 20, 147, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(95, 192, 116, 0.6), 0 0 30px rgba(255, 215, 0, 0.6),
+                0 0 45px rgba(255, 20, 147, 0.8), 0 0 60px rgba(95, 192, 116, 1);
+    border-color: rgba(95, 192, 116, 1);
+  }
+}
+
+.app-container {
+  width: 700px;
+  padding: 0px;
+  background: rgba(255, 255, 255, 0.2); 
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px); 
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  animation: glowing2 8s infinite alternate; 
+}
+
+
+/* Rainbow gradient background */
+@keyframes glowing {
+  0% {
+    background: rgba(255, 0, 0, 0.3); 
+  }
+  20% {
+    background: rgba(255, 165, 0, 0.3);
+  }
+  40% {
+    background: rgba(255, 255, 0, 0.3);
+  }
+  60% {
+    background: rgba(0, 255, 0, 0.3); 
+  }
+  80% {
+    background: rgba(0, 0, 255, 0.3); 
+  }
+  100% {
+    background: rgba(75, 0, 130, 0.3);  
+  }
+}
+
+
+h1 {
+  color: rgba(1, 4, 10, 0.363); 
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  text-shadow: 0 0 5px rgba(11, 9, 75, 0.514), 0 0 10px rgba(95, 192, 116, 0.5);
+}
+
+
+.input-section input {
+  width: 60px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  margin: 5px;
+  background: rgba(255, 255, 255, 0.8); 
+}
+
+button {
+  background-color: #4caf50; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-left: 5px;
+  transition: background-color 0.3s; 
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.display-section {
+  font-size: 32px;
+  color: #f0f0f0;
+  margin-top: 20px;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); 
+}
+
+.video-section {
+  width: 100%; /* Or a specific width */
+  height: 400px; /* Set a fixed height for the video container */
+  overflow: hidden; /* Prevents scrollbars */
+  display: flex;
+  justify-content: center; /* Center the video */
+  align-items: center; /* Center the video */
+}
+
+
+.video-section video {
+  width: 100%; 
+  height: auto; 
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.video-player {
+  width: 100%; /* Make the video fill the container's width */
+  height: 100%; /* Make the video fill the container's height */
+  object-fit: cover; /* Scale the video to cover the container */
+}
